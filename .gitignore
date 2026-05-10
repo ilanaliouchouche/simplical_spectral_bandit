@@ -1,0 +1,32 @@
+.DS_Store
+
+# C++ build artifacts
+build/
+build_release/
+cmake-build-*/
+out/
+compile_commands.json
+
+# Runtime/generated outputs
+outputs/
+outputs_cpp/
+outputs_test/
+
+# Python and notebook legacy (intentionally ignored in this C++ project)
+*.py
+*.pyc
+*.pyo
+*.ipynb
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+notebooks/
+spectral_bandit/
+tests/
+requirements.txt
+*.egg
+*.egg-info/
+
+# Large local mesh asset to keep outside git history
+egg.obj

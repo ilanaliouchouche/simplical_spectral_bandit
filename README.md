@@ -42,7 +42,7 @@ Given a triangular mesh $\mathcal{M}=(V,F)$, the lumped mass per vertex is:
 $$
 m_i = \frac{1}{3}\sum_{f \ni i} A_f,
 \qquad
-M=\operatorname{diag}(m_1,\dots,m_n).
+M=\mathrm{diag}(m_1,\dots,m_n).
 $$
 
 The cotangent Laplacian is assembled with:
@@ -74,7 +74,7 @@ $$
 Recover the distance potential with Poisson:
 
 $$
-(L+\varepsilon M)\phi = \operatorname{div}(X),
+(L+\varepsilon M)\phi = \mathrm{div}(X),
 \qquad
 d_s(i)=\phi_i-\min_k \phi_k.
 $$
@@ -141,19 +141,19 @@ $$
 \mu_j = x_j^\top\theta_t,\qquad
 \sigma_j = \sqrt{x_j^\top V_t^{-1}x_j},
 \qquad
-\operatorname{UCB}_j = \mu_j + \alpha \sigma_j.
+\mathrm{UCB}_j = \mu_j + \alpha \sigma_j.
 $$
 
 With geodesic travel cost $c_j$, final score is:
 
 $$
-\operatorname{score}_j = \operatorname{UCB}_j - \beta c_j.
+\mathrm{score}_j = \mathrm{UCB}_j - \beta c_j.
 $$
 
 The selected patch is:
 
 $$
-a_t = \arg\max_j \operatorname{score}_j,
+a_t = \arg\max_j \mathrm{score}_j,
 $$
 
 then the simulator samples reward $r_t\in\{0,1\}$, runs shortest-path motion on the mesh, and updates $(V,b)$.
